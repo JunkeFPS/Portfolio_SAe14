@@ -1,0 +1,294 @@
+body {
+  margin: 0px; /*initialisation du body*/
+  padding: 0px;
+  font-family: "Lato", sans-serif;
+  background-color: #000;
+}
+
+nav {
+  width: 100%;
+  background-color:#000 ;
+}
+
+nav > ul {
+  margin: 0px; /*espace autour de l'élément gris*/
+  padding: 0px; /*emplacement du texte dans la case grise*/
+}
+
+nav > ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+nav > ul > li {
+  float: left; /*position gauche du texte */
+  position: relative;
+}
+
+nav > ul > li > a {
+  padding: 20px 30px;/*emplacement texte hauteur 1ere valeur et droite 2eme*/
+  color: #FFF;/*couleur texte en blanc*/
+}
+
+nav > ul > li:hover a{
+  padding: 15px 30px 20px 30px;/*padding emplacement top, droite, en bas, à gauche*/
+}
+
+nav li {
+  list-style-type: none;/* pas de point devant chaque élément de ma list principale*/
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+.pp:hover {
+  border-top: 5px solid #FFF;
+  background-color: rgba(128, 128, 128);/*quand on passe souris dessus couleur + bordure en plus :hover*/
+}
+
+.exp:hover {
+  border-top: 5px solid #FFF;
+  background-color: rgba(128, 128, 128);
+}
+
+.cursus:hover {
+  border-top: 5px solid #FFF;
+  background-color: rgba(128, 128, 128);
+}
+
+.interet:hover {
+  border-top: 5px solid #FFF;
+  background-color: rgba(128, 128, 128);
+}
+
+.home:hover {
+  border-top: 5px solid #FFF;
+  background-color: rgba(128, 128, 128) ;
+}
+
+.source:hover {
+  border-top: 5px solid #FFF;
+  background-color: rgba(128, 128, 128) ;
+}
+
+.tableau1 { /*la bande type header doit être blanche prendre tout l'écran et une hauteur de 150px*/
+  background-color:#FFF ;
+  width : 100%;
+  height :150px;
+}
+
+.barre1 {    /*la barre hr doit être noir et pas de bordure et bonne largeur et hauteur*/
+    border: none;
+    height: 3px;
+    background-color: #000;
+    width: 40px;
+}
+
+.title {
+  text-align: center;  /*titre au centre*/
+  animation: apparition1 0.8s ease-out; /*annimation qui va s'appeler apparition1 qui dure 0,8s et ease out = ralentissement vers la fin*/
+  font-size: 30px; /*taille de l'écriture*/
+}
+
+@keyframes apparition1 {
+  from { /*de -1000px sur l'axe des X */
+    opacity: 1;
+    transform: translateX(-1000px);
+  }
+  to { /*vers la position alligné au centre définit au début*/
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.barre1 {
+  animation: apparition2 1.2s ease-out; /*la même animation qui dure plus longtemps et vient de la droite cette fois (+1000 au lieu de -1000)*/
+}
+
+@keyframes apparition2 {
+  from {
+    opacity: 1;
+    transform: translateX(1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.t1 {
+  text-align: center;  /*aligner texte au centre*/
+}
+
+.texte1 {
+  text-align: center;  /*aligner texte au centre*/
+  width:98%;  /*largeur de 98*/
+}
+
+
+.box2 {
+  border-style: solid; /*contour de la boite*/
+  border-width: 2px; /*épaisseur à 2*/
+  border-color: #FFF; /*couleur blanche*/
+  box-shadow: 3px 2px 10px #FFF;/*ombre blanche*/
+  color: #FFF; /*couleur texte*/
+  width: 50%;  /*lergeur de la boite*/
+  display: block; /*placement au centre avec block et les marges*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px; /*décalage vers le bas de 20px*/
+}
+
+.tete {
+  width : 20%;/*mise à l'échelle de la photo*/
+  height : auto;
+}
+
+.gauchetxt {
+  position: relative; /*positionnement de l'image par rapport à son emplacement d'origine grâce à relative*/
+  bottom: 180px;
+  left: 5px;
+}
+
+.cont {/*bande qui fait la largeur de l'écran et qui est blanche avec une hauteur définit*/
+  background-color:#FFF ;
+  width : 100%;
+  height :150px;
+}
+
+.barre2 { /*définition de la deuxième hr*/
+    border: none;
+    height: 3px;
+    background-color: #000;
+    width: 100px;
+    position: relative;
+    top: 50px;
+}
+
+.contact { /*couleur du texte avec une taille d'écriture*/
+  color: #000;
+  font-size: 18px;
+}
+
+.fk { /*taille icône avec son positionnement*/
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  position: relative;
+  bottom: 7px;
+}
+
+.mail { /*taille icône avec positionnement*/
+  width: 105px;
+  height: auto;
+  position: relative;
+  bottom: 3px;
+  border-radius: 50px;
+}
+
+.ppbx {/*création de boites qui ont un coutour blanc en ombre avec du texte blanc positionnement au centre de l'écran avec ajustement en hauteur */
+  border-style: solid;
+  border-width: 2px;
+  border-color: #FFF;
+  box-shadow: 3px 2px 10px #FFF;
+  color: #FFF;
+  width: 95%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pptxt {/*texte au centre de la boite mais changement de la largeur pour pas coller aux bordures de la boite et couleur blanche*/
+  text-align: center;
+  width:98%;
+  color: #FFF;
+}
+
+.insa {
+  display: block; /* sans cette ligne l'image ne se met pas au centre */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.atout {
+  list-style-type: square; /*la liste commence avec des petits carrés*/
+}
+
+.IUT {/*phtot de bonne taille et au centre*/
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.expbx {/*boites avec contours comme celle plus haute*/
+  border-style: solid;
+  border-width: 2px;
+  border-color: #FFF;
+  box-shadow: 3px 2px 10px #FFF;
+  color: #FFF;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.exptxt { /*pareil que pptxt (même but)*/
+  text-align: center;
+  width:98%;
+  color: #FFF;
+}
+
+.CV { /*bouton pour le cv qui à son positionnement en hauteur, définition du bouton au niveau de la largeur et au centre*/
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: solid;
+  border-radius: 50px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.CVtxt {/*texte au centre du bouton*/
+  text-align: center;
+}
+
+.lienCV {/*n'apparit pas comme un lien d'apparence et couleur blanche*/
+  text-decoration:none;
+  color: #FFF;
+}
+
+.tabsource { /*bordures du tableau blanche avec une largeur sur l'écran et au centre de ce dernier*/
+  color: #FFF;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fk2 { /*taille logo facebook et mail et au centre*/
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fk3 { /*taille logo insa et rtlogo et au centre*/
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.just { /*les justifications de certaines images qui en ont besoins sont au centre et définit avec une taille de police*/
+  text-align: center;
+  font-size: 11px;
+}
